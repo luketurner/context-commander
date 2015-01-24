@@ -1,0 +1,24 @@
+{
+  "name": "context-commander",
+  "version": "1.0.0a1",
+  "description": "A Web application for making custom context menu entries.",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "reactify": "^1.0.0"
+  },
+  "scripts": {
+    "build": "browserify -t reactify app/app.jsx -o static/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luketurner/context-commander.git"
+  },
+  "author": "Luke Turner <github@luketurner.org> (http://luketurner.org/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luketurner/context-commander/issues"
+  },
+  "homepage": "https://github.com/luketurner/context-commander"
+}
