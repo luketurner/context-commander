@@ -10,10 +10,6 @@ from contextext import ContextEntry
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 @app.route('/reg/<filename>')
 def reg(filename):
     entry = ContextEntry(name=request.args["name"] if "name" in request.args else "",
