@@ -350,7 +350,7 @@ module.exports = React.createClass({displayName: "exports",
     },
     urlFor: function (type) {
         var filename = this.props.entry.name + "-" + type + ".reg";
-        return base_url + filename + "?" + querystring.stringify(this.props.entry);
+        return base_url + filename + "?" + querystring.stringify(this.props.entry) + "&for=" + type;
     },
     render: function () {
         return React.createElement("div", {className: "downloadLinks row"}, 
