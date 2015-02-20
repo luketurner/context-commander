@@ -379,13 +379,13 @@ module.exports = React.createClass({displayName: "exports",
                 "You can either use file extensions like .txt or .py, or use the wildcard * to match all files."
             ), 
             React.createElement("p", null, 
-                "You can also use the special string \"Directory\" to match directories (including the current one, if" + ' ' +
-                "you right-click somwhere in the white space of the window)."
+                "You can also use the special string \"Directory\" to match directories, and the special string \"Background\"" + ' ' +
+                "to make the entry appear when right-clicking in the window background (%1 is the current directory in this case)."
             ), 
             React.createElement("ul", {className: "monospace"}, 
                 React.createElement("li", null, ".doc .docx .xls .xslx"), 
                 React.createElement("li", null, "Directory .py"), 
-                React.createElement("li", null, "* Directory")
+                React.createElement("li", null, "* Background")
             )
         );
         return React.createElement("div", {className: "extensionEntry row"}, 

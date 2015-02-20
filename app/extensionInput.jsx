@@ -16,13 +16,13 @@ module.exports = React.createClass({
                 You can either use file extensions like .txt or .py, or use the wildcard * to match all files.
             </p>
             <p>
-                You can also use the special string "Directory" to match directories (including the current one, if
-                you right-click somwhere in the white space of the window).
+                You can also use the special string "Directory" to match directories, and the special string "Background"
+                to make the entry appear when right-clicking in the window background (%1 is the current directory in this case).
             </p>
             <ul className="monospace">
                 <li>.doc .docx .xls .xslx</li>
                 <li>Directory .py</li>
-                <li>* Directory</li>
+                <li>* Background</li>
             </ul>
         </InfoTip>;
         return <div className="extensionEntry row">

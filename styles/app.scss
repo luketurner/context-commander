@@ -1,0 +1,65 @@
+#app {
+  margin-top: 10%;
+}
+
+label {
+  margin: .5rem 0 0 0;
+}
+
+@mixin info-tip-triangle-mixin {
+  border-bottom: 9px solid transparent;
+  border-top: 9px solid transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.infoTip {
+  display: inline-block;
+  position: relative;
+  .text {
+    cursor: pointer;
+  }
+  .popup {
+    position: absolute;
+    top: -12px;
+    left: 22px;
+    z-index: 1000;
+    .triangle {
+      height: 10px;
+      left: 0;
+      position: absolute;
+      top: 8px;
+      width: 0;
+      z-index: 1;
+      &:before {
+        @include info-tip-triangle-mixin;
+        border-right: 9px solid #bbb;
+        right: 0;
+      }
+      &:after {
+        @include info-tip-triangle-mixin;
+        border-right: 9px solid white;
+        right: -1px;
+      }
+    }
+    .content {
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 3px #ccc;
+      background: white;
+      padding: 5px 10px;
+      width: 240px;
+    }
+  }
+}
+
+input, .monospace {
+  font-family: Consolas, Inconsolata, Monaco, "Courier New", monospace;
+}
+
+.downloadLinks .button {
+  margin: 0 5% 5% 5%;
+  width: 40%;
+}
