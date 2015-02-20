@@ -20,6 +20,6 @@ def reg(filename):
         response = make_response(entry.removal_diff)
     else:
         response = make_response(entry.install_diff)
-    response.headers["Content-Type"] = 'text/plain; charset="utf-8"'
+    response.headers["Content-Type"] = 'application/octet-stream; charset="utf-8"'
     response.headers["Content-Disposition"] = "attachment"
     return response

@@ -370,7 +370,7 @@ module.exports = React.createClass({displayName: "exports",
         onChange: React.PropTypes.func.isRequired
     },
     onChange: function (e) {
-        this.props.onChange(e.target.value.split());
+        this.props.onChange(e.target.value.split(' '));
     },
     render: function () {
         var infoTip = React.createElement(InfoTip, null, 

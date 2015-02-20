@@ -7,7 +7,7 @@ module.exports = React.createClass({
         onChange: React.PropTypes.func.isRequired
     },
     onChange: function (e) {
-        this.props.onChange(e.target.value.split());
+        this.props.onChange(e.target.value.split(' '));
     },
     render: function () {
         var infoTip = <InfoTip>
