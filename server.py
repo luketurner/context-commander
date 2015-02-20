@@ -12,10 +12,13 @@ app = Flask(__name__)
 
 @app.route('/reg/<filename>')
 def reg(filename):
+    extensions = request.args.getlist("extensions") if "extensions" in request.args else None
+    if extensions is str:
+        extensions = [extensions]
     entry = ContextEntry(name=request.args["name"] if "name" in request.args else "",
                          text=request.args["text"] if "text" in request.args else "",
                          command=request.args["command"] if "command" in request.args else "",
-                         extensions=request.args.getlist("extensions") if "extensions" in request.args else set())
+                         extensions=extensions)
     if "for" in request.args and request.args["for"] == "uninstall":
         response = make_response(entry.removal_diff)
     else:
