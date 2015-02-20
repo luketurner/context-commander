@@ -13,13 +13,13 @@ module.exports = React.createClass({
         }).isRequired
     },
     urlFor: function (type) {
-        var filename = this.props.entry.name + "-" + ".reg";
+        var filename = this.props.entry.name + "-" + type + ".reg";
         return base_url + filename + "?" + querystring.stringify(this.props.entry);
     },
     render: function () {
         return <div className="downloadLinks row">
             <a className="button" href={this.urlFor("install")}>install</a>
             <a className="button" href={this.urlFor("uninstall")}>uninstall</a>
-        </div>
+        </div>;
     }
 });

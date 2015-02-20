@@ -15,7 +15,7 @@ def reg(filename):
     entry = ContextEntry(name=request.args["name"] if "name" in request.args else "",
                          text=request.args["text"] if "text" in request.args else "",
                          command=request.args["command"] if "command" in request.args else "",
-                         extensions=request.args.getlist("extension") if "extension" in request.args else set())
+                         extensions=request.args.getlist("extensions") if "extensions" in request.args else set())
     if "for" in request.args and request.args["for"] == "uninstall":
         response = make_response(entry.removal_diff)
     else:
