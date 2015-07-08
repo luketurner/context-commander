@@ -5,7 +5,7 @@ var path = require("path");
 
 module.exports = {
     cache: true,
-    entry: "./src/client/app.jsx",
+    entry: "./src/client/index.jsx",
     output: {
         path: path.join(__dirname, "dist"),
         publicPath: "/dist/",

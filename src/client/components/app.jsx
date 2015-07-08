@@ -1,15 +1,5 @@
-// Include index.html in distribution
-require('file?name=[name].[ext]!./index.html');
-
-// Include styles
-require('../../bower_components/skeleton/css/normalize.css');
-require('../../bower_components/skeleton/css/skeleton.css');
-require('./app.scss');
-
-// Include 3rd party libs
 var React = require('react');
 
-// Include components
 var ExtensionInput        = require('./extensionInput.jsx');
 var CommandInput          = require('./commandInput.jsx');
 var MenuTextInput         = require('./menuTextInput.jsx');
@@ -18,7 +8,7 @@ var DownloadLinksForEntry = require('./downloadLinksForEntry.jsx');
 var FragmentHandler       = require('./fragmentHandler.js');
 
 
-var App = React.createClass({
+module.exports = React.createClass({
     getInitialState: function() {
         return {
             name: "name",
@@ -71,8 +61,3 @@ var App = React.createClass({
         </div>;
     }
 });
-
-React.render(
-    <App />,
-    document.getElementById("app")
-);
