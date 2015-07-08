@@ -19,7 +19,7 @@ The steps below are only needed for individuals who want to modify or fork this 
 2. Install local dependencies: `npm install`
 3. Install client-side dependencies: `bower install`
 
-Now you can run `gulp build` or `gulp build-dev`, both of which use webpack to compile `/src/client/app.jsx` and
+Now you can run `gulp build` or `gulp build-dev`, both of which use webpack to compile `/src/client/index.jsx` and
 everything it includes (which is *everything*). Now you can run the application using `npm start [hostname] [port]`.
 
 You can use `gulp dev-server` to run a dev server that will rebuild client assets and restart the node server
