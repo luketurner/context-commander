@@ -1,0 +1,6 @@
+{
+  "name": "context-commander",
+  "dependencies": {
+    "skeleton": "~2.0.4"
+  }
+}

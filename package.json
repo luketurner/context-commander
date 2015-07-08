@@ -1,24 +1,39 @@
 {
   "name": "context-commander",
-  "version": "1.0.0a2",
+  "version": "1.0.0a3",
   "description": "A Web application for making custom context menu entries.",
-  "dependencies": {
-    "react": "^0.12.2"
-  },
-  "devDependencies": {
-    "reactify": "^1.0.0"
-  },
-  "scripts": {
-    "build": "browserify -t reactify app/app.jsx -o static/app.js"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/luketurner/context-commander.git"
   },
+  "dependencies": {
+    "koa": "^0.21.0",
+    "koa-static": "^1.4.9",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^1.2.0",
+    "css-loader": "^0.14.3",
+    "file-loader": "^0.8.4",
+    "jsx-loader": "^0.13.2",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "gulp-nodemon": "^2.0.3",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.1.2",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.9.10"
+  },
+  "scripts": {
+    "start": "node --harmony src/server/main.js"
+  },
+  "main": "src/server/main.js",
   "author": "Luke Turner <github@luketurner.org> (http://luketurner.org/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/luketurner/context-commander/issues"
   },
-  "homepage": "https://github.com/luketurner/context-commander"
+  "homepage": "http://context.luketurner.org"
 }
