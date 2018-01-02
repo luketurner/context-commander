@@ -1,5 +1,5 @@
 # context-commander
-Source for http://context.luketurner.org, a Web-based utility that lets you modify your context menu entries.
+Source for a Web-based utility that lets you modify your context menu entries. It used to be hosted online, but the site has been taken down (I got tired of paying for it). You can still use it by cloning this repository and running the application locally. See the *Running the Application* section below..
 
 Client code written in Javascript using [React](http://facebook.github.io/react/).
 The server is also written in Javascript, using Node and [Koa](http://koajs.com/).
